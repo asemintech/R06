@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap');
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  background: #fff;
+  border-radius: 10px;
+  color: #4d4d4d;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 40px;
+}
+
+.title {
+  color: #4d4d4d;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 10px 0 0;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0 0;
+}
+
+.delete_btn {
+  width: 30%;
+  background: transparent;
+  border: 1px solid #808080;
+  border-radius: 50px;
+  color: #4d4d4d;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 10px;
+  padding: 10px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.delete_btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+.btn {
+  width: 30%;
+  background: transparent;
+  border: 1px solid #808080;
+  border-radius: 50px;
+  color: #4d4d4d;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 10px;
+  padding: 10px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.4;
+}

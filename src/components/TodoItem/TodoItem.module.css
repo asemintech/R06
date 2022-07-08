@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap');
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 50px;
+  color: #808080;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+li.completed {
+  background: #cecece;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+input[type = 'checkbox' i ] {
+  outline: none;
+  accent-color: #333;
+  margin: 0 10px ;
+  cursor: pointer;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  height: 20px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  opacity: 0.8;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.4;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
