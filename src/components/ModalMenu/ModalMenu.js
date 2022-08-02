@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import styles from './ModalMenu.module.css';
 import ModalDelete from '../ModalDelete/ModalDelete';
 import ModalEdit from '../ModalEdit/ModalEdit';
+import favoriteFilled from '../../icons/favorite-icon-filled.png';
+import favorite from '../../icons/favorite-icon.png';
+import undo from '../../icons/return-icon.png';
+import checkmark from '../../icons/done-icon.png';
+import edit from '../../icons/edit-icon.png';
+import remove from '../../icons/remove-icon.png';
 
 const ModalMenu = ({ show, close, todo, handleComplete, handleFavourite }) => {
   const { completed, favourite } = todo;
@@ -25,52 +31,32 @@ const ModalMenu = ({ show, close, todo, handleComplete, handleFavourite }) => {
                 <button className={styles.btn} onClick={handleFavourite}>
                   <img
                     className={styles.icon}
-                    src='https://img.icons8.com/material-rounded/96/000000/hearts.png'
+                    src={favoriteFilled}
                     alt='Favorite'
                   />
                 </button>
               ) : (
                 <button className={styles.btn} onClick={handleFavourite}>
-                  <img
-                    className={styles.icon}
-                    src='https://img.icons8.com/material-outlined/96/000000/hearts.png'
-                    alt='Favorite'
-                  />
+                  <img className={styles.icon} src={favorite} alt='Favorite' />
                 </button>
               )}
               {completed ? (
                 <button className={styles.btn} onClick={handleComplete}>
-                  <img
-                    className={styles.icon}
-                    src='https://img.icons8.com/material-rounded/96/000000/return.png'
-                    alt='Return'
-                  />
+                  <img className={styles.icon} src={undo} alt='Return' />
                 </button>
               ) : (
                 <button className={styles.btn} onClick={handleComplete}>
-                  <img
-                    className={styles.icon}
-                    src='https://img.icons8.com/material-rounded/96/000000/checkmark--v1.png'
-                    alt='Done'
-                  />
+                  <img className={styles.icon} src={checkmark} alt='Done' />
                 </button>
               )}
               <button className={styles.btn} onClick={() => ToggleModalEdit()}>
-                <img
-                  className={styles.icon}
-                  src='https://img.icons8.com/small/96/000000/edit.png'
-                  alt='Edit'
-                />
+                <img className={styles.icon} src={edit} alt='Edit' />
               </button>
               <button
                 className={styles.btn}
                 onClick={() => ToggleModalDelete()}
               >
-                <img
-                  className={styles.icon}
-                  src='https://img.icons8.com/fluency-systems-regular/96/000000/minus.png'
-                  alt='Delete'
-                />
+                <img className={styles.icon} src={remove} alt='Delete' />
               </button>
             </div>
             <ModalEdit show={modalEdit} close={ToggleModalEdit} todo={todo} />

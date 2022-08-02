@@ -14,7 +14,7 @@ const TodoForm: React.FC = () => {
 
     if (newTodo.trim().length === 0) return;
 
-    fetch('https://62bf3495be8ba3a10d65ed0b.mockapi.io/todos', {
+    fetch('https://62e7b55693938a545bd77018.mockapi.io/todos', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ const TodoForm: React.FC = () => {
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setNewTodo(event.currentTarget.value);
-  }
+  };
 
   return (
     <form className={styles.form} onSubmit={onSubmit}>
@@ -48,7 +48,9 @@ const TodoForm: React.FC = () => {
         onChange={onChange}
         placeholder=''
       />
-      <button className={styles.btn} type='submit'>+</button>
+      <button className={styles.btn} type='submit'>
+        +
+      </button>
     </form>
   );
 };

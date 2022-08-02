@@ -3,11 +3,13 @@ import { useDispatch } from 'react-redux';
 import styles from './TodoItem.module.css';
 import { toggleFavourite, toggleComplete } from '../../store/todoSlice';
 import ModalMenu from '../ModalMenu/ModalMenu';
+import favoriteFilled from '../../icons/favorite-icon-filled.png';
+import menu from '../../icons/menu-icon.png';
 
 interface ITodoItemProps {
-  todo: { 
-    id: number; 
-    title: string; 
+  todo: {
+    id: number;
+    title: string;
     favourite: boolean;
     completed: boolean;
   };
@@ -33,30 +35,18 @@ const TodoItem: React.FC<ITodoItemProps> = ({ todo }) => {
   return (
     <li className={`${completed ? styles.completed : ''}`}>
       <span className={styles.checkbox}>
-        <input
-          type='checkbox'
-          checked={completed}
-          onChange={handleComplete}
-        />
+        <input type='checkbox' checked={completed} onChange={handleComplete} />
         {title}
       </span>
       <span className={styles.btns}>
-      {favourite && (
-        <button className={styles.btn} onClick={() => handleFavourite()}>
-          <img 
-            className={styles.icon} 
-            src='https://img.icons8.com/material-rounded/96/000000/hearts.png' 
-            alt='Favourite' 
-          />
+        {favourite && (
+          <button className={styles.btn} onClick={() => handleFavourite()}>
+            <img className={styles.icon} src={favoriteFilled} alt='Favorite' />
+          </button>
+        )}
+        <button className={styles.btn} onClick={() => ToggleModalMenu()}>
+          <img className={styles.icon} src={menu} alt='Menu' />
         </button>
-      )}
-      <button className={styles.btn} onClick={() => ToggleModalMenu()}>
-        <img 
-          className={styles.icon} 
-          src='https://img.icons8.com/small/96/000000/menu-2.png' 
-          alt='Menu' 
-        />
-      </button>
       </span>
       <ModalMenu
         show={modalMenu}

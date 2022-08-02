@@ -15,7 +15,7 @@ const ModalEdit = ({ show, close, todo }) => {
 
     if (title.length === 0) return;
 
-    fetch(`https://62bf3495be8ba3a10d65ed0b.mockapi.io/todos/${todo.id}`, {
+    fetch(`https://62e7b55693938a545bd77018.mockapi.io/todos/${todo.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

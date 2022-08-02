@@ -20,10 +20,10 @@ const TodoList = () => {
     Favorite: (todo) => todo.favourite,
     Completed: (todo) => todo.completed,
   };
-  
+
   const filterName = Object.keys(filterMap);
 
-  const filterList = filterName.map(name => (
+  const filterList = filterName.map((name) => (
     <FilterButton
       key={name}
       name={name}
@@ -34,9 +34,7 @@ const TodoList = () => {
 
   return (
     <div className={styles.list}>
-      <div className="filters btn-group stack-exception">
-        {filterList}
-      </div>
+      <div className={styles.filter}>{filterList}</div>
       {todos.filter(filterMap[filter]).map((todo) => (
         <TodoItem key={todo.id} todo={todo} />
       ))}

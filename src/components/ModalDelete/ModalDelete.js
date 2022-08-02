@@ -7,7 +7,7 @@ const ModalDelete = ({ show, close, todo }) => {
   const dispatch = useDispatch();
 
   const handleDelete = () => {
-    fetch(`https://62bf3495be8ba3a10d65ed0b.mockapi.io/todos/${todo.id}`, {
+    fetch(`https://62e7b55693938a545bd77018.mockapi.io/todos/${todo.id}`, {
       method: 'DELETE',
     }).then(dispatch(deleteTodo({ id: todo.id })));
   };

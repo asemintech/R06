@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const getTodos = createAsyncThunk('todos/getTodos', async () => {
   const response = await fetch(
-    'https://62bf3495be8ba3a10d65ed0b.mockapi.io/todos'
+    'https://62e7b55693938a545bd77018.mockapi.io/todos'
   );
 
   if (response) {

@@ -17,7 +17,20 @@
   color: #4d4d4d;
   font-family: 'Urbanist', sans-serif;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 20px;
   letter-spacing: 3px;
   text-transform: uppercase;
+  margin: 20px 0;
+}
+
+@media all and (max-width: 912px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 540px) {
+  .container {
+    width: 80%;
+  }
 }

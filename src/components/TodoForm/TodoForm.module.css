@@ -11,7 +11,6 @@
 
 .input {
   width: 85%;
-  height: 40px;
   background: #fff;
   border: 1px solid #808080;
   border-radius: 50px;
@@ -22,7 +21,7 @@
   font-size: 13px;
   letter-spacing: 1px;
   margin: 0 10px 0 0;
-  padding: 0 0 0 10px;
+  padding: 11px;
 }
 
 .btn {
@@ -30,7 +29,6 @@
   justify-content: center;
   align-items: center;
   width: 42px;
-  height: 42px;
   background: #fff;
   border: 1px solid #808080;
   border-radius: 50px;
@@ -40,10 +38,16 @@
   font-weight: 400;
   font-size: 16px;
   margin: 0;
-  padding: 0;
+  padding: 11px;
   transition: opacity 0.5s;
   cursor: pointer;
 }
 .btn:hover {
   opacity: 0.4;
+}
+
+@media all and (max-width: 540px) {
+  .btn {
+    font-size: 13px;
+  }
 }
